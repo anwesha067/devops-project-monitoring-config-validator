@@ -140,16 +140,3 @@ The Monitoring Configuration Validator improves reliability in monitoring system
 By integrating validation into CI/CD and containerizing the application, the project demonstrates real-world DevOps practices.
 
 
-💾 **Save the file**.
-
----
-
-## 🔹 STEP 3 — Commit README
-
-### 📍 WHERE?
-➡️ **Terminal**
-
-```bash
-git add README.md
-git commit -m "Add project README documentation"
-git push
