@@ -28,15 +28,15 @@ cd devops-project-monitoring-config-validator
 
 
 
-Step 2: Create virtual environment
+### Step 2: Create virtual environment
 python3 -m venv venv
 source venv/bin/activate
 
 
-Step 3: Install dependencies
+### Step 3: Install dependencies
 pip install -r requirements.txt
 
-Step 4: Run validation
+### Step 4: Run validation
 python src/validator.py src/sample_configs/valid_prometheus.yml
 
 
