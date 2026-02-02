@@ -22,9 +22,11 @@ The tool helps prevent monitoring failures caused by incorrect configurations.
 ## 3. Running the Validator Locally
 
 ### Step 1: Clone the repository
-```bash
+
 git clone https://github.com/anwesha067/devops-project-monitoring-config-validator.git
 cd devops-project-monitoring-config-validator
+
+
 
 Step 2: Create virtual environment
 python3 -m venv venv
