@@ -40,14 +40,14 @@ pip install -r requirements.txt
 python src/validator.py src/sample_configs/valid_prometheus.yml
 
 
-4. Running the Validator Using Docker
+## 4. Running the Validator Using Docker
 Step 1: Build Docker image
 docker build -t monitoring-config-validator .
 
 Step 2: Run validator
 docker run monitoring-config-validator src/sample_configs/valid_prometheus.yml
 
-5. Understanding Output
+## 5. Understanding Output
 Valid Configuration
 ✅ Configuration is valid
 
@@ -55,16 +55,16 @@ Invalid Configuration
 ❌ Validation Failed
 - Job 0 missing 'job_name'
 
-6. CI/CD Integration
+## 6. CI/CD Integration
 The validator is integrated with GitHub Actions.
 On every push or pull request, configurations are automatically validated.
 If validation fails, the pipeline fails.
 
-7. Troubleshooting
+## 7. Troubleshooting
 Ensure correct file paths
 Ensure YAML syntax is valid
 Check GitHub Actions logs if pipeline fails
 
 
-8. Conclusion
+## 8. Conclusion
 This tool enables DevOps teams to validate monitoring configurations automatically, improving reliability and observability.
