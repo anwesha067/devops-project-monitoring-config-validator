@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  validator:
+    build: .
+    container_name: monitoring-validator
+    volumes:
+      - ./src:/app/src
+    command: python src/main/validator.py src/main/config/valid_prometheus.yml
