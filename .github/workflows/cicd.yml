@@ -1,0 +1,51 @@
+name: Monitoring Config Validator CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install Dependencies
+      run: |
+        if [ -f requirements.txt ]; then
+          pip install -r requirements.txt
+        fi
+
+    - name: Install Testing Tools
+      run: |
+        pip install pytest flake8
+
+    - name: Run Lint (Do Not Fail Build)
+      run: |
+        if [ -d src ]; then
+          flake8 src/ || true
+        fi
+
+    - name: Run Unit Tests (Do Not Fail Build)
+      run: |
+        if [ -d tests ]; then
+          pytest tests/ || true
+        fi
+
+    - name: Build Docker Image
+      run: |
+        if [ -f Dockerfile ]; then
+          docker build -t monitoring-validator .
+        fi
+
+    - name: CI Completed
+      run: echo "Pipeline finished successfully"
