@@ -1,142 +1,147 @@
 # Monitoring Configuration Validator
 
-**Student Name:** Anwesha Jain  
-**Course:** DevOps  
-**Project Type:** Monitoring & CI/CD Automation  
-**Difficulty Level:** Intermediate  
+Student Name: Anwesha Jain  
+Registration No: 23FE10CSE00795  
+Course: CSE3253 DevOps [PE6]  
+Semester: VI (2025-2026)  
+Project Type: Puppet & Monitoring  
+Difficulty: Intermediate  
 
 ---
 
-##  Project Overview
+## Project Overview
 
-Modern monitoring systems such as Prometheus rely on configuration files written in YAML.  
-Even small mistakes in these configuration files can lead to monitoring failures, missed alerts, or system downtime.
+Monitoring Configuration Validator is a DevOps tool designed to validate monitoring configurations (Nagios/Prometheus style configs) and detect syntax errors, missing fields, duplicate alerts, and misconfigurations before deployment.
 
-This project provides an automated **Monitoring Configuration Validator** that validates monitoring configuration files before they are deployed, ensuring reliability and correctness through CI/CD automation.
+---
+
+## Problem Statement
+
+Incorrect monitoring configurations can cause:
+- Missed alerts
+- False positives
+- System downtime
+- Alert fatigue
+
+There is no automated validation system before deploying monitoring configs. This project solves that problem.
 
 ---
 
 ## Objectives
 
-- Validate monitoring configuration files automatically
-- Detect syntax and logical errors in YAML-based configs
-- Prevent faulty monitoring configurations from being deployed
-- Integrate validation into a CI/CD pipeline
-- Containerize the solution using Docker
+- Validate monitoring configuration files
+- Detect syntax errors and missing parameters
+- Identify duplicate alert rules
+- Generate validation reports
+- Integrate validation into CI/CD pipeline
 
 ---
 
-##  Key Features
+## Key Features
 
-- YAML configuration validation
-- Prometheus monitoring config checks
-- Command-line interface (CLI) tool
-- Automated CI/CD validation using GitHub Actions
-- Dockerized application for portability
-- Clear error reporting for invalid configurations
+- Config syntax validation
+- Alert rule verification
+- Duplicate detection
+- Error reporting dashboard
+- Dockerized deployment
+- CI/CD integration
+- Monitoring integration
 
 ---
 
-##  Technology Stack
+## Technology Stack
 
 ### Core Technologies
-- **Programming Language:** Python 3
-- **Configuration Format:** YAML
+Programming Language: Python  
+Framework: Flask  
+Database: None  
 
 ### DevOps Tools
-- **Version Control:** Git & GitHub
-- **CI/CD:** GitHub Actions
-- **Containerization:** Docker
+Version Control: Git  
+CI/CD: GitHub Actions  
+Containerization: Docker  
+Orchestration: Kubernetes  
+Configuration Management: Puppet  
+Monitoring: Nagios  
 
 ---
 
-## Project Structure
-
-devops-project-monitoring-config-validator/
-│
-├── README.md
-├── requirements.txt
-├── Dockerfile
-│
-├── src/
-│ ├── validator.py
-│ └── sample_configs/
-│ ├── valid_prometheus.yml
-│ └── invalid_prometheus.yml
-│
-├── .github/
-│ └── workflows/
-│ └── ci.yml
-│
-└── deliverables/
-
----
-
-##  Getting Started
+## Getting Started
 
 ### Prerequisites
-- Python 3.9+
+- Docker Desktop v20+
+- Python 3.8+
 - Git
-- Docker Desktop (for container execution)
+
+### Installation
+
+1. Clone the repository:
+   git clone
+   https://github.com/yourusername/devopsprojectmonitoringconfigurationvalidator.git
+   cd devopsprojectmonitoringconfigurationvalidator
+   
+2. Run using Docker:
+docker-compose up --build
+
+3. Access:
+   http://localhost:8080/
+   
+---
+
+## CI/CD Pipeline
+
+Stages:
+1. Linting
+2. Build Docker Image
+3. Run Unit Tests
+4. Security Scan
+5. Deploy
 
 ---
 
-###  Run Locally (Without Docker)
+## Testing
 
-1. Create and activate virtual environment:
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
+Unit Tests: pytest  
+Integration Tests: pytest tests/integration  
 
-2. Install dependencies:
-    pip install -r requirements.txt
+---
 
-3. Run validator:
-    python src/validator.py src/sample_configs/valid_prometheus.yml
+## Monitoring Setup
 
+Nagios configured for:
+- Service health check
+- Application uptime
+- Custom validation metrics
 
-Run Using Docker
-1. Build Docker image:
-docker build -t monitoring-config-validator .
+---
 
-2. Run validator:
-docker run monitoring-config-validator src/sample_configs/valid_prometheus.yml
+## Security
 
+- Input validation
+- Secure configuration loading
+- Environment variables
+- Docker image scanning
 
-CI/CD Pipeline
-The project uses GitHub Actions to automatically validate monitoring configurations on every push and pull request.
-Pipeline Steps:
-Checkout repository
-Setup Python environment
-Install dependencies
-Run configuration validator
-If the configuration is invalid, the pipeline fails automatically.
+---
 
-Sample Output
+## Challenges
 
-Valid Configuration
-✅ Configuration is valid
+1. Parsing complex monitoring configs  
+2. Handling multiple configuration formats  
+3. Integration with CI/CD  
 
-Invalid Configuration
-❌ Validation Failed
-- Job 0 missing 'job_name'
+---
 
-Use Case
-* This tool can be used by DevOps teams to:
-* Validate monitoring configurations before deployment
-* Prevent silent monitoring failures
-* Enforce configuration standards through CI/CD pipelines
+## Learnings
 
+- Monitoring as Code
+- CI/CD automation
+- Docker containerization
+- DevOps best practices
 
-Learning Outcomes
-* Practical understanding of CI/CD pipelines
-* Hands-on experience with Docker
-* YAML configuration validation
-* GitHub Actions automation
-* DevOps best practices
+---
 
-Conclusion
-The Monitoring Configuration Validator improves reliability in monitoring systems by detecting configuration issues early in the development lifecycle.
-By integrating validation into CI/CD and containerizing the application, the project demonstrates real-world DevOps practices.
+## Contact
 
-
+Student: Anwesha Jain  
+GitHub: https://github.com/anwesha067
