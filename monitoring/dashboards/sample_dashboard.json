@@ -1,0 +1,9 @@
+{
+    "title": "System Monitoring Dashboard",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "CPU Usage"
+      }
+    ]
+  }
