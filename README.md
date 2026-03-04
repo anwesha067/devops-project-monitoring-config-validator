@@ -73,69 +73,72 @@ Monitoring Config Examples: Nagios style configs
 
 ---
 
-# Project Structure
+## Project Structure
+
+```
 devops-project-monitoring-config-validator
 │
-├── src/
-│   ├── main/
+├── src
+│   ├── main
 │   │   └── validator.py
-│   ├── config/
+│   ├── config
 │   │   └── config.yaml
-│   └── scripts/
+│   └── scripts
 │
-├── docs/
-│   ├── architecture/
+├── docs
+│   ├── architecture
 │   │   └── architecture-diagram.png
-│   ├── screenshots/
+│   ├── screenshots
 │   ├── apidocumentation.md
 │   ├── design-document.md
 │   ├── projectplan.md
 │   └── user-guide.md
 │
-├── infrastructure/
-│   ├── docker/
+├── infrastructure
+│   ├── docker
 │   │   ├── Dockerfile
 │   │   └── docker-compose.yml
-│   ├── kubernetes/
+│   ├── kubernetes
 │   │   ├── deployment.yaml
 │   │   ├── service.yaml
 │   │   └── configmap.yaml
-│   ├── puppet/
+│   ├── puppet
 │   │   └── monitoring_validator.pp
-│   └── terraform/
+│   └── terraform
 │
-├── monitoring/
-│   ├── alerts/
+├── monitoring
+│   ├── alerts
 │   │   └── cpu_alert.yml
-│   ├── dashboards/
+│   ├── dashboards
 │   │   └── sample_dashboard.json
-│   └── nagios/
+│   └── nagios
 │       └── sample_host.cfg
 │
-├── tests/
-│   ├── unit/
+├── tests
+│   ├── unit
 │   │   └── test_dummy.py
-│   ├── integration/
-│   ├── selenium/
-│   └── testdata/
+│   ├── integration
+│   ├── selenium
+│   └── testdata
 │
-├── pipelines/
+├── pipelines
 │
-├── presentations/
+├── presentations
 │   └── demoscript.md
 │
-├── deliverables/
+├── deliverables
 │   ├── demovideo.mp4
 │   ├── finalreport.pdf
-│   └── assessment/
+│   └── assessment
 │
-├── .github/workflows/
-│   └── cicd.yml
+├── .github
+│   └── workflows
+│       └── cicd.yml
 │
 ├── README.md
 ├── LICENSE
 └── requirements.txt
----
+```
 
 # Installation
 
