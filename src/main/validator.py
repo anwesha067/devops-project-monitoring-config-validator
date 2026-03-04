@@ -12,6 +12,7 @@ def validate_prometheus_config(file_path):
 
     if "scrape_configs" not in config:
         errors.append("Missing 'scrape_configs' section")
+
     else:
         for index, job in enumerate(config["scrape_configs"]):
             if "job_name" not in job:

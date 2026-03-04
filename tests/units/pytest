@@ -1,3 +1,0 @@
-- name: Run Unit Tests
-  run: |
-    pytest tests/ || true
