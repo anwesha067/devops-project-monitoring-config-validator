@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 name: Monitoring Config Validator CI/CD
-=======
-name: Monitoring Configuration Validator CI/CD
->>>>>>> de2c73f (Add missing project template folders)
 
 on:
   push:
@@ -15,18 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-<<<<<<< HEAD
     - name: Checkout Code
       uses: actions/checkout@v3
 
     - name: Set up Python
-=======
-
-    - name: Checkout Repository
-      uses: actions/checkout@v3
-
-    - name: Setup Python
->>>>>>> de2c73f (Add missing project template folders)
       uses: actions/setup-python@v4
       with:
         python-version: '3.9'
@@ -37,29 +25,17 @@ jobs:
           pip install -r requirements.txt
         fi
 
-<<<<<<< HEAD
     - name: Install Testing Tools
       run: |
         pip install pytest flake8
 
     - name: Run Lint (Do Not Fail Build)
-=======
-    - name: Install Lint & Test Tools
-      run: |
-        pip install flake8 pytest
-
-    - name: Run Linter
->>>>>>> de2c73f (Add missing project template folders)
       run: |
         if [ -d src ]; then
           flake8 src/ || true
         fi
 
-<<<<<<< HEAD
     - name: Run Unit Tests (Do Not Fail Build)
-=======
-    - name: Run Unit Tests
->>>>>>> de2c73f (Add missing project template folders)
       run: |
         if [ -d tests ]; then
           pytest tests/ || true
@@ -68,20 +44,8 @@ jobs:
     - name: Build Docker Image
       run: |
         if [ -f Dockerfile ]; then
-<<<<<<< HEAD
           docker build -t monitoring-validator .
         fi
 
     - name: CI Completed
       run: echo "Pipeline finished successfully"
-=======
-          docker build -t monitoring-config-validator .
-        fi
-
-    - name: Security Scan (Placeholder)
-      run: |
-        echo "Security scan step completed"
-
-    - name: Pipeline Completed
-      run: echo "CI/CD pipeline finished successfully"
->>>>>>> de2c73f (Add missing project template folders)
